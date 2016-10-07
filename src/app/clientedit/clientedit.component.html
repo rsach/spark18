@@ -1,0 +1,135 @@
+<!-- <div class="row">
+  <div class="col-xs-10">
+    <br>
+    <br>
+    <form [formGroup] ="taskForm" (ngSubmit) = "submitForm()" >
+
+
+
+
+      <div class="form-group">
+        <label for="name">Task Name</label>
+        <input type="text" id="name" class="form-control"
+               formControlName="name">
+      </div>
+
+
+
+
+      <div class="form-group">
+        <label for="imgUrl">Enter URL of image</label>
+        <input type="text" id="imgUrl" class="form-control"
+               formControlName="imgUrl">
+      </div>
+
+
+
+
+
+
+
+
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Add Task</button>
+      </div>
+
+
+
+    </form>
+
+
+  </div>
+
+
+</div>
+
+<hr>
+
+
+-->
+
+
+
+
+<div class="row">
+  <div class="col-xs-12">
+    <form [formGroup] ="taskForm" (ngSubmit) = "submitForm()">
+      <div class="row">
+        <div class="col-xs-12">
+          <button type="submit" class="btn btn-success" >Save</button>
+          <a class="btn btn-danger" (click)="onCancel()">Cancel</a>
+        </div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="name">Task Name</label>
+            <input type="text" id="name" class="form-control"
+                   formControlName="name">
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="imgUrl">Enter URL of image</label>
+            <input type="text" id="imgUrl" class="form-control"
+                   formControlName="imgUrl" #imgUrl>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="img">
+            <img [src]="imgUrl.value" >
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+    </form>
+
+
+
+
+  </div>
+
+
+</div>
+
+
+
+<div class="row" *ngFor = " let item of clients ">
+  <div class="col-md-4">
+    <img class="client-thumb" src="{{item.imgUrl}}" >
+
+
+  </div>
+  <div class="col-md-8">
+    <h2>{{item.name}}</h2>
+    <input type="button" value="edit" (click)="onEdit(item)">
+
+    <input type="button" value="Delete" (click)="onDelete(item)">
+
+
+  </div>
+
+
+</div>
+
