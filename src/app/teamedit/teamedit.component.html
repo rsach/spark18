@@ -1,3 +1,5 @@
+
+<div class="animated bounceInLeft">
 <div class="row">
   <div class="col-xs-10">
     <br>
@@ -35,7 +37,7 @@
 
 
       <div class="form-group">
-        <button type="submit" class="btn btn-primary">Add Task</button>
+        <button type="submit" class="btn btn-success" [disabled] = "!taskForm.valid">Add a Team Member</button>
       </div>
 
 
@@ -47,12 +49,12 @@
 
 
 </div>
-
+</div>
 <hr>
 
 
 
-<div class="row" *ngFor = " let item of teams ">
+<div class="row animated bounceInUp" *ngFor = " let item of teams ">
   <div class="col-md-4">
     <img class="client-thumb" src="{{item.imgUrl}}" >
 

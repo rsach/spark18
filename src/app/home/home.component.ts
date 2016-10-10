@@ -24,10 +24,10 @@ export class HomeComponent implements AfterViewInit {
 
 
 	 homeText:string [] = [
-                   'we are a solution to your digital needs','We are a creative mashup of millennials','we make the graphics speak','Get in touch<br>'
-                ];	
+                   'we are a solution to your digital needs','We are a creative mashup of millennials','we make the graphics speak','Get in touch'
+                ];
   constructor() {
-  		
+
    }
 
   ngAfterViewInit() {
@@ -41,7 +41,7 @@ export class HomeComponent implements AfterViewInit {
 }
 
 */
-  
+
 
   toggle(){
 

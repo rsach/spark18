@@ -1,7 +1,10 @@
+
+<div class="animated bounceInLeft">
 <a routerLink = "/teamedit" class="btn btn-primary">Edit Team</a>
 
 
-<div class="row" *ngFor = " let item of teams">
+<div class="row " *ngFor = " let item of teams">
+  <div class="animated bounceInUp">
   <div class="col-md-4">
     <img class="client-thumb" src="{{item.imgUrl}}" >
 
@@ -13,7 +16,9 @@
 
 
   </div>
+  </div>
 
+</div>
 
 </div>
 

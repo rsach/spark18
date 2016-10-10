@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container animated bounceInLeft">
 
 <div class=" col-md-5" style="height: 100px">
   <div class="w3-third w3-container w3-black w3-large" style="height:250px">
@@ -36,7 +36,7 @@
       <form [formGroup] ="taskForm" (ngSubmit) = "submitForm()">
         <div class="row">
           <div class="col-xs-12">
-            <button type="submit" class="btn btn-success" >Send</button>
+            <button type="submit" class="btn btn-success" [disabled] = "!taskForm.valid" >Send</button>
             <a class="btn btn-danger" (click)="onCancel()">Cancel</a>
           </div>
         </div>
